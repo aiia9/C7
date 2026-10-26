@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class FileName
+    {
+        static void Main(string[] args)
+        {
+            SimpleDate date = new SimpleDate(26, 10, 2026);
+            Console.WriteLine(date.IsLeapYear());
+        }
+    }
+    public struct SimpleDate
+    {
+        public int Day;
+        public int Month;
+        public int Year;
+
+        public SimpleDate(int Day, int Month, int Year)
+        {
+            this.Day = Day;
+            this.Month = Month;
+            this.Year = Year;
+        }
+
+        public string IsLeapYear()
+        {
+            if (DateTime.IsLeapYear(Year))
+                return "Год високосный!";
+            else
+                return "Год не високосный!";
+        }
+    }
+}
