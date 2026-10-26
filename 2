@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class FileName
+    {
+        static void Main(string[] args)
+        {
+            Rectangle p1 = new Rectangle(15, 5);
+            Console.WriteLine(p1.ToString());
+        }
+    }
+    public struct Rectangle
+    {
+        public int Width;
+        public int Height;
+
+        public Rectangle(int Width, int Height)
+        {
+            this.Width = Width;
+            this.Height = Height;
+        }
+
+        public override string ToString()
+        {
+            return $"Width = {Width}, Height = {Height}, площадь прямоугольника {Width * Height}, периметр прямоугольника {2 * (Width + Height)}";
+        }
+    }
+}
